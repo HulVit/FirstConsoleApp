@@ -49,8 +49,9 @@ Console.WriteLine("Enter employee's first & last name: ");
 for (int i = 0; i < 3; i = i + 1)
 {
 
+    // FIXME: Check value for empty strins
     employeeFNLN = Console.ReadLine();
-
+    // TODO: Check empty first name and empty last name
     string[] fnlnArr = employeeFNLN!.Split(" ");
 
     Console.WriteLine("Enter income: ");
