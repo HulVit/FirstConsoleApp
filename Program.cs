@@ -62,7 +62,7 @@ for (int i = 0; i < 3; i = i++)
 
     int income = epl.getIncomeSum(startIncome);
     if (income == -1) {
-     Console.WriteLine("ERROR!!!!");
+     Console.WriteLine("ERROR INCOME!!!!");
      continue;
    }
 
