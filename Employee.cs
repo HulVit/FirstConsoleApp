@@ -20,15 +20,30 @@ namespace FirstConsoleApp
         }
         
         public int getIncomeSum(int startIncome) {
-            int resultIncome = startIncome;
-            if (this.experienceYears > 5) {
-                resultIncome = startIncome + startIncome / 100 * 10;
+            int resultIncome = 0;
+            if (startIncome <= 0) {
+                //resultIncome = -1;
+                Console.WriteLine("ERROR");
+                return -1;
             }
+            else{
+                if (this.experienceYears <= 0){
+                    Console.WriteLine("ERROR");
+                    return -1;
+                }
+                else{
+                    resultIncome = startIncome + startIncome / 100 * 10;
+                }
 
-            if (this.numberOfPassedExams > 10) {
-                resultIncome = resultIncome + resultIncome / 100 * 15;
+                if (this.numberOfPassedExams <= 0){
+                    Console.WriteLine("ERROR");
+                    return -1;
+                }
+                else{
+                    resultIncome = resultIncome + resultIncome / 100 * 15;
+                }
+
             }
-
             return resultIncome;
         }
     }

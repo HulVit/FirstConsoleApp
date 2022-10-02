@@ -2,7 +2,7 @@
 
 using FirstConsoleApp;
 
-Console.WriteLine("-  - - ---> Hello! Welcome to FirstConsoleApp version 0.0.3 <--- - -  -");
+Console.WriteLine("-  - - ---> Hello! Welcome to FirstConsoleApp version 0.0.4 <--- - -  -");
 
 static void printInfo(string? employeeFN, string? employeeLN, int incomeTaxSum, int socialInsuranceSum, int additionalMedicalInsuranceSum, int pensionFundSum, int charityFeesSum, int totalFees, int salaryNetto)
 {
@@ -46,7 +46,7 @@ Console.WriteLine("Enter employee's first & last name: ");
 
 
 
-for (int i = 0; i < 3; i = i + 1)
+for (int i = 0; i < 3; i = i++)
 {
 
     // FIXME: Check value for empty strins
@@ -59,7 +59,12 @@ for (int i = 0; i < 3; i = i + 1)
 
     Employee epl = new Employee(fnlnArr[0], fnlnArr[1], 7, 10);
 
+
     int income = epl.getIncomeSum(startIncome);
+    if (income == -1) {
+     Console.WriteLine("ERROR!!!!");
+     continue;
+   }
 
     int incomeTax;
     int socialInsurance;
@@ -85,4 +90,5 @@ for (int i = 0; i < 3; i = i + 1)
 
     int salaryNetto = income - totalFees;
     printInfo(epl.firstName, epl.lastName, incomeTaxSum, socialInsuranceSum, additionalMedicalInsuranceSum, pensionFundSum, charityFeesSum, totalFees, salaryNetto);
+
 }
